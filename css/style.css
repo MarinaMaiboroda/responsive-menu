@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?n2f6ev');
+  src:  url('../fonts/icomoon.eot?n2f6ev#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?n2f6ev') format('truetype'),
+    url('../fonts/icomoon.woff?n2f6ev') format('woff'),
+    url('../fonts/icomoon.svg?n2f6ev#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+
+
+html,body{
+	min-height: 100%;
+	height: 100%;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	line-height: 1.56;
+}
+
+.btn{
+	display: inline-block;
+	margin: auto;
+	padding: 0.9rem 1.2rem;
+	font-weight: 700;
+	font-size: 0.9rem;
+	background: none;
+	color: #48bf72;
+	text-transform: uppercase;
+	border: 1px solid #48bf72;
+	border-radius: 3px;
+	text-decoration: none;
+	transition: all 0.5s ease;
+}
+.btn:hover{
+	background: #48bf72;
+	color: #fff;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	cursor: pointer;   
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+/* Layout */
+.ba-container{
+	max-width: 1140px;
+	width: 100%;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+}
+
+.ba-container.remove-space{
+	/*font-size: 0;*/
+}
+
+/* First section */
+.first-slide{
+	min-height: 100%;
+	height: auto;
+	background: #3c4955 url("../img/Background.jpeg") no-repeat center center; 
+	background-size: cover;
+}
+
+.first-slide-content{
+	color: #fff;
+	text-align: center; 
+}
+
+.first-slide-content .btn{
+	margin: 2rem 0;
+}
+
+
+/* Header */
+.logo{
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+}
+
+header{
+	padding: 2.25rem 0;
+	//position: relative;
+	/*position: fixed;*/
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+header nav{
+	display: inline-block;
+	vertical-align: middle;
+	width: 75%;
+	text-align: right;
+	float: right;
+	
+}
+
+header nav a{
+	display: inline-block;
+	padding: 2.75rem 0 2.75rem 3rem;
+	color: #fff;
+	font-size: 1rem;
+	text-decoration: none;
+	font-weight: 700;	
+	transition: color 0.5s ease;
+}
+
+header nav a:hover{
+	color: #48bf72;
+}
+
+header nav a:hover:after{
+	color: #fff;
+}
+
+header nav a:after{
+	content: "/";
+	display: inline-block;
+	padding-left: 3rem;
+	opacity: 0.3;
+	/* Убираем мерцание слеша добавляя ему цвет,
+	он мигал потомучто цвет не был задан и в момент когда ховер 
+	убирался он наследовал значенте родителя, а у родителя на момент выхода их ховера был цвет зеленый */
+	color: #fff;
+}
+
+header nav li:last-child a:after{
+	content: "";
+}
+
+header ul{
+	list-style: none;
+	padding-left: 0;
+}
+
+header ul li{
+	display: inline-block;
+}
+
+
+.img-wrap{
+	/* transform: translateY(200%); */
+	/* opacity: 0; */
+	position: relative;
+	border-radius: 10px;
+	transition: transform 2s ease, opacity 2s ease;
+}
+
+#main-content{
+	overflow: hidden;
+}
+
+.img-wrap.left{
+	transform: translateX(-200%);
+	transition: transform 2s ease;
+}
+
+.img-wrap.right{
+	transform: translateX(200%);
+	transition: transform 2s 1s ease;
+}
+
+.img-wrap.show{
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.img-wrap img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+/*Hover эффект с ипользованием display*/
+.img-wrap.use-display .hover-img{
+	display: none;
+}
+
+.img-wrap.use-display:hover .hover-img{
+	display: block;
+	position: absolute;
+	background: rgba(79,186, 116, 0.9);
+	top: 0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	border-radius: 10px;
+	color: #fff;	
+}
+
+/* Hover эффект с ипользованием opacity */
+.img-wrap.use-opacity .hover-img{
+	position: absolute;
+	top: 0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	/*z-index нужен для того что бы hover эффект не накладывался на изображение когда его не видно*/
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.img-wrap.use-opacity:hover .hover-img{
+	background: rgba(79,186, 116, 0.9);
+	z-index: 1;
+	opacity: 1;
+	border-radius: 10px;
+	color: #fff;
+}
+
+/* Hover эффект с ипользованием transform:scale */
+.img-wrap.use-scale .hover-img{
+	position: absolute;
+	top: 0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	/*Делаем блок с нулевой высотой и шириной*/
+	transform: scale(0);
+	transition: all 0.5s ease;
+}
+
+.img-wrap.use-scale:hover .hover-img{
+	background: rgba(79,186, 116, 0.9);
+	border-radius: 10px;
+	transform: scale(1);
+	color: #fff;
+}
+
+/* Hover эффект с ипользованием transform:translate */
+.img-wrap.use-translate{
+	/*Что бы опущенный вниз ховер эффект не был виден*/
+	overflow: hidden;
+}
+
+.img-wrap.use-translate .hover-img{
+	position: absolute;
+	top: 0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	/*Опускаем блок с ховер эффектом вниз за пределы изображения */
+	transform: translate(0, 100%);
+
+	transition: all 0.5s ease;
+}
+
+.img-wrap.use-translate:hover .hover-img{
+	background: rgba(79,186, 116, 0.9);
+	border-radius: 10px;
+	transform: translate(0, 0);
+	color: #fff;
+}
+
+.img-wrap .hover-img .hover-text{
+	position: relative;
+	top: 50%;
+	transform: translate(0, -50%);
+	text-align: center;
+}
+
+/*Responsive menu*/
+#show-menu{
+	float:  right;
+	background: white;
+	border: 1px solid #000;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+@media (max-width: 885px){
+	#show-menu{
+		position: relative;
+		z-index: 1;
+		opacity: 1;
+	}
+
+	header nav{
+		/* transform: translateY(-100%); */
+		position: absolute;
+		opacity: 0;
+		transform: scale(1, 0);
+		transform-origin: 0 0;
+		display: block;
+		width: auto;
+		top: 63px;
+		right: 0;
+		/* z-index: -1; */
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	header nav li{
+		display: block;
+	}
+
+	header nav li a{
+		padding: 0.7rem 2.5rem;
+	}
+
+	header nav li a:after{
+		content: '';
+		padding: 0;
+	}
+
+	nav.open{
+		transform: scale(1, 1);
+		opacity: 1;
+	} 
+
+	nav.animation{
+		transition: transform 0.5s ease, opacity 0.5s ease;
+	}
+}
